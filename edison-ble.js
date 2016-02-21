@@ -13,7 +13,9 @@ EdisonBLEManager = require('./ble-manager');
 // 
 var customService = new EdisonCustomService();
 
-//
+console.log('Starting EdisonCustomService: ', customService.uuid);
+
+
 bleno.on('stateChange', function(state) {
     console.log('on -> stateChange: ' + state);
     

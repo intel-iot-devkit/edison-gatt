@@ -14,15 +14,19 @@ You can do this either with FileZilla or SCP or you can install Git on your Edis
 
 On your Edison do this:
 
+```
 $ systemctl disable bluetoothd
 $ rfkill unblock bluetooth
 $ killall -9 bluetoothd
 $ hciconfig hci0 up
 $ node install
 $ node edison-ble.js
+```
 
 # Step 4: Scan your BLE service with a  mobile phone
 
 I recommend downloading the LightBlue app on your iOS phone or equivalent on your Android phone. With Android you may need to turn Blueooth off and back on again to kickstart the sucker.
+
+Another approach is to use Noble to explore the service from your laptop.
 
 Now you should be able to scan and read your Edison GATT service.
